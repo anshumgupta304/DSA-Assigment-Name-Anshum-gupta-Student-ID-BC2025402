@@ -6,15 +6,14 @@ int queue[SIZE];
 int front = -1;
 int rear = -1;
 
-// ENQUEUE operation
 void enqueue(int x) {
-    // Queue is full
+    
     if ((rear + 1) % SIZE == front) {
         printf("Queue is Full!\n");
         return;
     }
 
-    // First element
+    
     if (front == -1) {
         front = 0;
     }
@@ -25,7 +24,6 @@ void enqueue(int x) {
     printf("%d inserted into queue.\n", x);
 }
 
-// DEQUEUE operation
 void dequeue() {
     if (front == -1) {
         printf("Queue is Empty!\n");
@@ -34,7 +32,7 @@ void dequeue() {
 
     printf("%d deleted from queue.\n", queue[front]);
 
-    // Only one element was present
+
     if (front == rear) {
         front = -1;
         rear = -1;
@@ -43,7 +41,6 @@ void dequeue() {
     }
 }
 
-// FRONT operation
 void showFront() {
     if (front == -1) {
         printf("Queue is Empty!\n");
@@ -53,7 +50,7 @@ void showFront() {
     printf("Front element: %d\n", queue[front]);
 }
 
-// DISPLAY operation
+
 void display() {
     if (front == -1) {
         printf("Queue is Empty!\n");
